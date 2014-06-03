@@ -5,7 +5,7 @@ class ProblemasController < ApplicationController
   # GET /problemas.json
   def index
     
-    @problemas = Problema.where(:thermostat_id => params[:id])
+   
   end
 
   # GET /problemas/1
