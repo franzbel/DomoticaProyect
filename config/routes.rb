@@ -1,5 +1,9 @@
 DomoticaProyect::Application.routes.draw do
 
+  resources :problemas
+
+ get '/schedules/reportar_problema/:id' => 'schedules#reportar_problema'
+ get '/schedules/insertar_problema/:id' => 'schedules#insertar_problema', as: 'insertar'
   resources :schedules
 
   resources :clients

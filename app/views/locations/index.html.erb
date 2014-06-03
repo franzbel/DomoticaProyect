@@ -35,10 +35,13 @@
               <td>
               <table>
                 <tbody>
-                  <tr><td><%= link_to t.place, controller: 'schedules', action: 'edit', id: t.id %></td><!--Mandando el id del termostato-->
+                  <tr><td><%= link_to "Agenda de configuracion", controller: 'schedules', action: 'edit', id: t.id %></td><!--Mandando el id del termostato-->
                   </tr>
-                  
-                  
+
+                  <tr><td><%= link_to 'Reportar problema', controller: 'problemas', action: 'new', id: t.id %></td><!--Mandando el id del termostato-->
+                  </tr>
+                  <tr><td><%= link_to 'ver problemas', controller: 'problemas', action: 'index', id: t.id %></td><!--Mandando el id del termostato-->
+                  </tr>
                   
                   <tr>
                     <td><a href="/locations/<%=location.id%>/thermostats/config_temp/<%=t.id%>">Temperatura Basica</a></td>  

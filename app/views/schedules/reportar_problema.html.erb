@@ -1,0 +1,6 @@
+<form action="http://localhost:3000/schedules/insertar_problema" method="post">
+	<label for="texto"></label>
+	<input type="text" name="texto" id="texto">
+	<%= hidden_field_tag(:parent_id, @id_t)%>
+	<input type="submit"> 
+</form>

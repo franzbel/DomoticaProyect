@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603004414) do
+ActiveRecord::Schema.define(version: 20140603210313) do
 
   create_table "alert_histories", force: true do |t|
     t.boolean  "state",         default: false, null: false
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 20140603004414) do
     t.datetime "updated_at"
   end
 
+  create_table "issues", force: true do |t|
+    t.integer  "thermostat_id"
+    t.text     "description"
+    t.string   "status"
+    t.text     "resolution"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locations", force: true do |t|
     t.string   "address"
     t.integer  "user_id"
@@ -49,6 +58,15 @@ ActiveRecord::Schema.define(version: 20140603004414) do
     t.datetime "updated_at"
     t.string   "country"
     t.string   "region"
+  end
+
+  create_table "problemas", force: true do |t|
+    t.integer  "thermostat_id"
+    t.text     "description"
+    t.string   "status"
+    t.text     "resolution"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", force: true do |t|

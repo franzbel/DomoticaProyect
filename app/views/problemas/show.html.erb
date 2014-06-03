@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Thermostat:</strong>
+  <%= @problema.thermostat_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @problema.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @problema.status %>
+</p>
+
+<p>
+  <strong>Resolution:</strong>
+  <%= @problema.resolution %>
+</p>
+
+<%= link_to 'Edit', edit_problema_path(@problema) %> |
+<%= link_to 'Back', problemas_path %>

@@ -3,6 +3,9 @@ class SchedulesController < ApplicationController
 # before_action :load_thermostat
   # GET /schedules
   # GET /schedules.json
+def insertar_problema
+   
+end
   def index
     @schedules = Schedule.all
   end
@@ -449,6 +452,10 @@ class SchedulesController < ApplicationController
     def schedule_params
       params.require(:schedule).permit(:day, :time, :temperature, :thermostat_id)
     end
+
+def reportar_problema
+    @id_t = params[:id]
+end
 
 
 end
